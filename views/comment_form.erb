@@ -1,0 +1,16 @@
+<h2><%= @form_title %></h2>
+<div>
+  <form action=<%= @form_action %> method=<%= @form_method %>>
+    <label for="title">Title</label>
+    <input type="text" name="title"
+      <% if @form_method == "get" %> disabled <% end %>
+      <% if @existed_comment %> value='<%= @existed_comment.title%>' <% end %> required>
+    <label for="name">Name</label>
+      <input type="text" name="name"
+        <% if @form_method == "get" %> disabled <% end %>
+        <% if @existed_comment %> value='<%= @existed_comment.name%>' <% end %> required>
+    <label for="content">Content</label>
+    <textarea rows="4" maxlength=100 name="content"<% if @form_method == "get" %> disabled <% end %> required><% if @existed_comment %><%= @existed_comment.content %><% end %></textarea>
+    <button type="submit"><%= @button_value %></button>
+  </form>
+</div>

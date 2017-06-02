@@ -1,0 +1,82 @@
+html {
+  background-color: #ccc; }
+
+body {
+  width: 700px;
+  height: 900px;
+  background-color: #dddcd9;
+  margin: 2em auto 2em;
+  padding: 25px;
+  position: relative;
+  font-family: Helvetica, Arial, sans-serif; }
+
+h1 {
+  color: #903;
+  font: 32px/1 Helvetica, Arial, sans-serif; }
+
+header h1 {
+  font-size: 40px;
+  line-height: 60px;
+  background: transparent url(/images/students.png) 0 0 no-repeat;
+  background-size: 50% auto;
+  padding-left: 70%; }
+
+nav {
+  font-weight: bold; }
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: #444;
+    overflow: hidden; }
+  nav li {
+    float: left; }
+  nav a {
+    text-decoration: none;
+    display: block;
+    padding: 8px;
+    background: #444;
+    color: #fff; }
+    nav a:hover {
+      background: #111111; }
+
+p {
+  font: 13px/1.4 Helvetica, Arial, sans-serif; }
+
+label {
+  display: block; }
+
+.center {
+  width: 55%;
+  margin: 8px auto; }
+
+.modify {
+  font: 12px/1.4 Helvetica, Arial, sans-serif;
+  font-style: italic; }
+
+.video_block {
+  width: 90%;
+  margin: 8px auto; }
+
+form input {
+  width: 80%;
+  display: inline;
+  float: right;
+  height: 1.2em; }
+form label {
+  padding: 4px 2px 2px;
+  display: inline;
+  float: left;
+  clear: left;
+  font: 13px/1.4 Helvetica, Arial, sans-serif; }
+form button {
+  text-decoration: none;
+  display: block;
+  clear: both;
+  margin: 10px auto;
+  padding: 4px 4px 4px;
+  width: 35%;
+  background: #444;
+  color: #fff; }
+  form button:hover {
+    background: #111111; }

@@ -1,0 +1,17 @@
+<h2>Students</h2>
+
+<% if @students.any? %>
+  <ul>
+    <% @students.each do |student| %>
+      <li>
+        <a href="/students/<%= student.id %>"><%= student.firstname + ' ' + student.lastname %></a>
+        <a href="/students/delete/<%= student.id %>" class="modify">delete</a>
+        <a href="/students/edit/<%= student.id %>" class="modify">edit</a>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>No students have been created yet!</p>
+<% end %>
+
+<a href="students/new">Create a new student</a>

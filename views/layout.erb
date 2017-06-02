@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+  <head>
+    <title><%= @title || "Student Information System"%></title>
+    <link href="/styles.css" rel="stylesheet" type="text/css">
+  </head>
+
+  <body>
+    <header>
+      <h1>Student Information System</h1>
+      <nav id="navigation">
+        <ul>
+          <li><a href='/'>Home</a></li>
+          <li><a href='/about'>About</a></li>
+          <li><a href='/contact'>Contact</a></li>
+          <li><a href='/students'>Students</a></li>
+          <li><a href='/comment'>Comment</a></li>
+          <li><a href='/video'>Video</a></li>
+          <li id='login'><a href='/login'>Login</a></li>
+          <li id='logout'><a href='/logout'>Logout</a></li>
+        </ul>
+      </nav>
+      <script type="text/javascript">
+        let username = '<%= session[:username] %>'
+        if (username == null || username.length == 0) {
+          document.getElementById('logout').style.display = 'none';
+        } else {
+          document.getElementById('login').style.display = 'none';
+        }
+      </script>
+    </header>
+    <section>
+      <%= yield %>
+    </section>
+  </body>
+</html>

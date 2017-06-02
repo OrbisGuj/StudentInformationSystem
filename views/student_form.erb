@@ -1,0 +1,26 @@
+<h2><%= @form_title %></h2>
+<div class="center">
+  <form action=<%= @form_action %> method=<%= @form_method %>>
+    <label for="fname">First Name</label>
+    <input type="text" name="fname"
+      <% if @form_method == "get" %> disabled <% end %>
+      <% if @existed_student %> value=<%= @existed_student.firstname%> <% end %> required>
+    <label for="lname">Last Name</label>
+    <input type="text" name="lname"
+      <% if @form_method == "get" %> disabled <% end %>
+      <% if @existed_student %> value=<%= @existed_student.lastname%> <% end %> required>
+    <label for="stid">Student ID</label>
+    <input type="text" name="stid"
+      <% if @form_method == "get" %> disabled <% end %>
+      <% if @existed_student %> value=<%= @existed_student.student_id %> <% end %> required>
+    <label for="bir">Birthday</label>
+    <input type="date" name="bir" value="1900-01-01"
+      <% if @form_method == "get" %> disabled <% end %>
+      <% if @existed_student %> value=<%= @existed_student.birthday%> <% end %>>
+    <label for="addr">Adrress</label>
+    <input type="text" name="addr"
+      <% if @form_method == "get" %> disabled <% end %>
+      <% if @existed_student %> value=<%= @existed_student.address%> <% end %>>
+    <button type="submit"><%= @button_value %></button>
+  </form>
+</div>
